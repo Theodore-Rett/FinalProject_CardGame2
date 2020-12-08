@@ -9,7 +9,13 @@
 import UIKit
 
 class PlaySpace: UIViewController {
-
+    @IBOutlet weak var topPlayerNumber: UILabel!
+    @IBOutlet weak var bottomPlayerNumber: UILabel!
+    
+    @IBOutlet weak var topCompNumber: UILabel!
+    @IBOutlet weak var bottomCompNumber: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
