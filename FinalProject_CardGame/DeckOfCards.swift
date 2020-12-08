@@ -19,8 +19,8 @@ class DeckOfCards {
     var computerCards: Int = 0
     
     init () {
-        deck = [2: .hearts, 3: .hearts, 4: .hearts, 5: .hearts, 6: .hearts, 7: .hearts, 8: .hearts, 9: .hearts, 10: .hearts, 11: .hearts, 12: .hearts, 13: .hearts]
-        //will print on card Jack for 11, Queen for 12, and Ace for 13
+        deck = [1: .hearts, 2: .hearts, 3: .hearts, 4: .hearts, 5: .hearts, 6: .hearts, 7: .hearts, 8: .hearts, 9: .hearts, 10: .hearts, 11: .hearts, 12: .hearts, 13: .hearts]
+        //will print on card Jack for 11, Queen for 12, and King for 13, 1 is the Ace
     }
     
     
