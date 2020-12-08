@@ -17,6 +17,7 @@
 		A03390F4257E67D400089978 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A03390F2257E67D400089978 /* LaunchScreen.storyboard */; };
 		A03390FF257E67D400089978 /* FinalProject_CardGameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03390FE257E67D400089978 /* FinalProject_CardGameTests.swift */; };
 		A033910A257E67D400089978 /* FinalProject_CardGameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0339109257E67D400089978 /* FinalProject_CardGameUITests.swift */; };
+		A0CAFDD82580198900E1F630 /* PlaySpace.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CAFDD72580198900E1F630 /* PlaySpace.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		A0339105257E67D400089978 /* FinalProject_CardGameUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FinalProject_CardGameUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0339109257E67D400089978 /* FinalProject_CardGameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalProject_CardGameUITests.swift; sourceTree = "<group>"; };
 		A033910B257E67D400089978 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A0CAFDD72580198900E1F630 /* PlaySpace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaySpace.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 				A03390E6257E67D200089978 /* SceneDelegate.swift */,
 				A03390E8257E67D200089978 /* ViewController.swift */,
 				A03390EA257E67D200089978 /* Main.storyboard */,
+				A0CAFDD72580198900E1F630 /* PlaySpace.swift */,
 				A0157ADF25800D600028E3B7 /* DeckOfCards.swift */,
 				A03390F0257E67D400089978 /* Assets.xcassets */,
 				A03390F2257E67D400089978 /* LaunchScreen.storyboard */,
@@ -269,6 +272,7 @@
 				A03390E9257E67D200089978 /* ViewController.swift in Sources */,
 				A03390E5257E67D200089978 /* AppDelegate.swift in Sources */,
 				A03390EF257E67D200089978 /* FinalProject_CardGame.xcdatamodeld in Sources */,
+				A0CAFDD82580198900E1F630 /* PlaySpace.swift in Sources */,
 				A03390E7257E67D200089978 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
