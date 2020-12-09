@@ -158,6 +158,9 @@
                                 <state key="normal" title="GO!">
                                     <color key="titleColor" red="0.69020086530000002" green="0.69018769260000001" blue="0.69019657369999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
+                                <connections>
+                                    <action selector="goButton:" destination="1Nx-8T-EPy" eventType="touchUpInside" id="Owb-Fl-0VR"/>
+                                </connections>
                             </button>
                             <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="plainCard" translatesAutoresizingMaskIntoConstraints="NO" id="gLF-UC-rk8">
                                 <rect key="frame" x="-5" y="162" width="180" height="214"/>
@@ -205,6 +208,12 @@
                     <connections>
                         <outlet property="bottomCompNumber" destination="PeT-tn-jhY" id="dUL-HT-5Qx"/>
                         <outlet property="bottomPlayerNumber" destination="SF3-Ls-qax" id="C5g-B3-0bj"/>
+                        <outlet property="compDiamond" destination="gV9-kY-e0m" id="gQM-uS-Kj2"/>
+                        <outlet property="compHeart" destination="Hyj-20-gpz" id="B1a-GX-Zeu"/>
+                        <outlet property="plainCompCard" destination="ljv-8p-5tP" id="MzQ-Og-ln8"/>
+                        <outlet property="plainPlayerCard" destination="gLF-UC-rk8" id="Oqv-7r-DK3"/>
+                        <outlet property="playerDiamond" destination="TOk-ry-Kwt" id="Y2V-g3-v3s"/>
+                        <outlet property="playerHeart" destination="H1n-Df-9ms" id="vey-Ip-bj6"/>
                         <outlet property="topCompNumber" destination="M28-fG-53f" id="1a2-l9-IAq"/>
                         <outlet property="topPlayerNumber" destination="07H-cC-qA5" id="Umc-WT-pRv"/>
                     </connections>

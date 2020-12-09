@@ -9,11 +9,17 @@
 import UIKit
 
 class PlaySpace: UIViewController {
+    @IBOutlet weak var plainPlayerCard: UIImageView!
     @IBOutlet weak var topPlayerNumber: UILabel!
     @IBOutlet weak var bottomPlayerNumber: UILabel!
+    @IBOutlet weak var playerDiamond: UIImageView!
+    @IBOutlet weak var playerHeart: UIImageView!
     
+    @IBOutlet weak var plainCompCard: UIImageView!
     @IBOutlet weak var topCompNumber: UILabel!
     @IBOutlet weak var bottomCompNumber: UILabel!
+    @IBOutlet weak var compDiamond: UIImageView!
+    @IBOutlet weak var compHeart: UIImageView!
     
     
     override func viewDidLoad() {
@@ -22,7 +28,10 @@ class PlaySpace: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func goButton(_ sender: UIButton) {
+        
+    }
+    
     /*
     // MARK: - Navigation
 
