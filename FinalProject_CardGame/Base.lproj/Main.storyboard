@@ -188,64 +188,8 @@
                                 <rect key="frame" x="8" y="162" width="152" height="209"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cardHeart" translatesAutoresizingMaskIntoConstraints="NO" id="H1n-Df-9ms">
-                                <rect key="frame" x="8" y="162" width="152" height="209"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="spadeSuit" translatesAutoresizingMaskIntoConstraints="NO" id="6T7-Ls-GEw">
-                                <rect key="frame" x="8" y="162" width="152" height="214"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="clubsSuit" translatesAutoresizingMaskIntoConstraints="NO" id="TeB-4U-Ptm">
-                                <rect key="frame" x="8" y="162" width="152" height="209"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cardAce" translatesAutoresizingMaskIntoConstraints="NO" id="DHW-B2-mBL">
-                                <rect key="frame" x="12" y="162" width="152" height="209"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cardAce" translatesAutoresizingMaskIntoConstraints="NO" id="k8Z-Kv-bqM">
+                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cardDiamond" translatesAutoresizingMaskIntoConstraints="NO" id="k8Z-Kv-bqM">
                                 <rect key="frame" x="207" y="162" width="152" height="209"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cardHeart" translatesAutoresizingMaskIntoConstraints="NO" id="Hyj-20-gpz">
-                                <rect key="frame" x="210" y="162" width="153" height="209"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cardDiamond" translatesAutoresizingMaskIntoConstraints="NO" id="gV9-kY-e0m">
-                                <rect key="frame" x="210" y="162" width="153" height="214"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="spadeSuit" translatesAutoresizingMaskIntoConstraints="NO" id="4h0-uH-f1p">
-                                <rect key="frame" x="210" y="162" width="153" height="209"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="clubsSuit" translatesAutoresizingMaskIntoConstraints="NO" id="EJh-wR-nTm">
-                                <rect key="frame" x="210" y="162" width="153" height="209"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cardJack" translatesAutoresizingMaskIntoConstraints="NO" id="rQ1-MD-iM6">
-                                <rect key="frame" x="8" y="162" width="152" height="209"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cardQueen" translatesAutoresizingMaskIntoConstraints="NO" id="lGy-Vf-beF">
-                                <rect key="frame" x="8" y="160" width="152" height="209"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cardJack" translatesAutoresizingMaskIntoConstraints="NO" id="fmk-9w-9o2">
-                                <rect key="frame" x="210" y="160" width="152" height="209"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cardQueen" translatesAutoresizingMaskIntoConstraints="NO" id="MFw-Fy-i12">
-                                <rect key="frame" x="210" y="162" width="152" height="209"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cardKing" translatesAutoresizingMaskIntoConstraints="NO" id="vJF-FZ-1GN">
-                                <rect key="frame" x="9" y="160" width="152" height="209"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cardKing" translatesAutoresizingMaskIntoConstraints="NO" id="Bxk-Ak-fAj">
-                                <rect key="frame" x="210" y="162" width="152" height="209"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -254,26 +198,12 @@
                     </view>
                     <navigationItem key="navigationItem" id="ePQ-hq-5Zf"/>
                     <connections>
-                        <outlet property="aceCompCard" destination="k8Z-Kv-bqM" id="M2b-mm-dzx"/>
-                        <outlet property="acePlayerCard" destination="DHW-B2-mBL" id="NcM-Rb-hS5"/>
                         <outlet property="bottomCompNumber" destination="PeT-tn-jhY" id="dUL-HT-5Qx"/>
                         <outlet property="bottomPlayerNumber" destination="SF3-Ls-qax" id="C5g-B3-0bj"/>
-                        <outlet property="compClub" destination="EJh-wR-nTm" id="Qmi-Yv-wx7"/>
-                        <outlet property="compDiamond" destination="gV9-kY-e0m" id="gQM-uS-Kj2"/>
-                        <outlet property="compHeart" destination="Hyj-20-gpz" id="B1a-GX-Zeu"/>
-                        <outlet property="compSpade" destination="4h0-uH-f1p" id="nZK-u0-g5l"/>
-                        <outlet property="jackCompCard" destination="fmk-9w-9o2" id="soY-SD-1e3"/>
-                        <outlet property="jackPlayerCard" destination="rQ1-MD-iM6" id="T05-hG-Uor"/>
-                        <outlet property="kingCompCard" destination="Bxk-Ak-fAj" id="KOm-wT-1g8"/>
-                        <outlet property="kingPlayerCard" destination="vJF-FZ-1GN" id="FT1-h5-RqQ"/>
+                        <outlet property="compSymbol" destination="k8Z-Kv-bqM" id="M2b-mm-dzx"/>
                         <outlet property="plainCompCard" destination="ljv-8p-5tP" id="MzQ-Og-ln8"/>
                         <outlet property="plainPlayerCard" destination="gLF-UC-rk8" id="Oqv-7r-DK3"/>
-                        <outlet property="playerClub" destination="TeB-4U-Ptm" id="ufw-cI-eMF"/>
-                        <outlet property="playerDiamond" destination="TOk-ry-Kwt" id="Y2V-g3-v3s"/>
-                        <outlet property="playerHeart" destination="H1n-Df-9ms" id="vey-Ip-bj6"/>
-                        <outlet property="playerSpade" destination="6T7-Ls-GEw" id="a4T-uy-6Fd"/>
-                        <outlet property="queenCompCard" destination="MFw-Fy-i12" id="5dx-hk-kEH"/>
-                        <outlet property="queenPlayerCard" destination="lGy-Vf-beF" id="F4x-Ym-Xgw"/>
+                        <outlet property="playerSymbol" destination="TOk-ry-Kwt" id="Y2V-g3-v3s"/>
                         <outlet property="starterCard" destination="BhD-Gp-jVg" id="H2y-3r-3Uo"/>
                         <outlet property="starterCard2" destination="HAs-g3-a6D" id="KeO-jj-vRV"/>
                         <outlet property="topCompNumber" destination="M28-fG-53f" id="1a2-l9-IAq"/>
@@ -304,16 +234,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="cardAce" width="366" height="512"/>
         <image name="cardDiamond" width="366" height="512"/>
-        <image name="cardHeart" width="366" height="512"/>
-        <image name="cardJack" width="366" height="512"/>
-        <image name="cardKing" width="366" height="512"/>
-        <image name="cardQueen" width="366" height="512"/>
-        <image name="clubsSuit" width="366" height="512"/>
         <image name="plainCard" width="366" height="512"/>
         <image name="playingCard" width="366" height="512"/>
-        <image name="spadeSuit" width="366" height="512"/>
         <image name="swords" width="4096" height="4096"/>
     </resources>
 </document>

@@ -12,29 +12,15 @@ class PlaySpace: UIViewController {
     @IBOutlet weak var plainPlayerCard: UIImageView!
     @IBOutlet weak var topPlayerNumber: UILabel!
     @IBOutlet weak var bottomPlayerNumber: UILabel!
-    @IBOutlet weak var playerDiamond: UIImageView!
-    @IBOutlet weak var playerHeart: UIImageView!
-    @IBOutlet weak var playerSpade: UIImageView!
-    @IBOutlet weak var playerClub: UIImageView!
     @IBOutlet weak var starterCard: UIImageView!
-    @IBOutlet weak var acePlayerCard: UIImageView!
-    @IBOutlet weak var jackPlayerCard: UIImageView!
-    @IBOutlet weak var queenPlayerCard: UIImageView!
-    @IBOutlet weak var kingPlayerCard: UIImageView!
+    @IBOutlet weak var playerSymbol: UIImageView!
     
     
     @IBOutlet weak var plainCompCard: UIImageView!
     @IBOutlet weak var topCompNumber: UILabel!
     @IBOutlet weak var bottomCompNumber: UILabel!
-    @IBOutlet weak var compDiamond: UIImageView!
-    @IBOutlet weak var compHeart: UIImageView!
-    @IBOutlet weak var compSpade: UIImageView!
-    @IBOutlet weak var compClub: UIImageView!
     @IBOutlet weak var starterCard2: UIImageView!
-    @IBOutlet weak var aceCompCard: UIImageView!
-    @IBOutlet weak var jackCompCard: UIImageView!
-    @IBOutlet weak var queenCompCard: UIImageView!
-    @IBOutlet weak var kingCompCard: UIImageView!
+    @IBOutlet weak var compSymbol: UIImageView!
     
     
     var playingDeck: DeckOfCards!
@@ -54,19 +40,22 @@ class PlaySpace: UIViewController {
         plainCompCard.isHidden = false
         starterCard.isHidden = true
         starterCard2.isHidden = true
+        playerSymbol.isHidden = false
+        compSymbol.isHidden = false
         tempTuple = playingDeck.drawACard()
         
         topPlayerNumber.text = "\(tempTuple.0)"
         bottomPlayerNumber.text = "\(tempTuple.0)"
+        
         switch tempTuple.1 {
         case .hearts:
-            playerHeart.isHidden = false
+            playerSymbol.image = UIImage(contentsOfFile: "cardHeart")
         case .diamonds:
-            playerDiamond.isHidden = false
+            playerSymbol.image = UIImage(contentsOfFile: "cardDiamond")
         case .clubs:
-            playerClub.isHidden = false
+            playerSymbol.image = UIImage(contentsOfFile: "cardClub")
         case .spades:
-            playerSpade.isHidden = false
+            playerSymbol.image = UIImage(contentsOfFile: "cardSpade")
         default:
             print("") //nothing
         }
