@@ -19,14 +19,7 @@ class DeckOfCards {
     var computerCards: Int = 0
     
     init () {
-        deck = [1: .hearts,
-                2: .hearts,
-                3: .hearts,
-                4: .hearts,
-                5: .hearts,
-                6: .hearts,
-                7: .hearts,
-                8: .hearts,
+        deck = [1: .hearts, 2: .hearts, 3: .hearts, 4: .hearts, 5: .hearts, 6: .hearts, 7: .hearts, 8: .hearts,
                 9: .hearts,
                 10: .hearts,
                 11: .hearts,
@@ -74,21 +67,22 @@ class DeckOfCards {
         //will print on card Jack for 11, Queen for 12, and King for 13, 1 is the Ace
     }
     
-    func drawCard() -> [Int: suit]{
-        let num = Int.random(in : 1...13)
-        let typeNum = Int.random(in : 1...4)
-        var type : suit
-        if(typeNum == 4){
-            type = .hearts
-        } else if(typeNum == 3){
-            type = .diamonds
-        } else if(typeNum == 2){
-            type = .clubs
-        } else {
-            type = .spades
-        }
-        deck.remove(at: num, type)
-        return[num : type]
-    }
+//    func drawCard() -> [Int: suit] {
+//        let num = Int.random(in : 1...13)
+//        let typeNum = Int.random(in : 1...4)
+//        var type : suit
+//        if(typeNum == 4){
+//            type = .hearts
+//        } else if(typeNum == 3){
+//            type = .diamonds
+//        } else if(typeNum == 2){
+//            type = .clubs
+//        } else {
+//            type = .spades
+//        }
+//        return deck.remove(at: num, type)
+//    }
+ 
     
 }
+
