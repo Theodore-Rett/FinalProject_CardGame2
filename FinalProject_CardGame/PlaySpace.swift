@@ -14,6 +14,14 @@ class PlaySpace: UIViewController {
     @IBOutlet weak var bottomPlayerNumber: UILabel!
     @IBOutlet weak var starterCard: UIImageView!
     @IBOutlet weak var playerSymbol: UIImageView!
+    @IBOutlet weak var playerWarCard1: UIImageView!
+    @IBOutlet weak var playerWarCard2: UIImageView!
+    @IBOutlet weak var playerWarCard3: UIImageView!
+    @IBOutlet weak var warLabel: UILabel!
+    @IBOutlet weak var goBtn: UIButton!
+    @IBOutlet weak var plainPlayerCard2: UIImageView!
+    @IBOutlet weak var topPlayerNum2: UILabel!
+    @IBOutlet weak var bottomPlayerNum2: UILabel!
     
     
     @IBOutlet weak var plainCompCard: UIImageView!
@@ -21,6 +29,12 @@ class PlaySpace: UIViewController {
     @IBOutlet weak var bottomCompNumber: UILabel!
     @IBOutlet weak var starterCard2: UIImageView!
     @IBOutlet weak var compSymbol: UIImageView!
+    @IBOutlet weak var compWarCard1: UIImageView!
+    @IBOutlet weak var compWarCard2: UIImageView!
+    @IBOutlet weak var compWarCard3: UIImageView!
+    @IBOutlet weak var plainCompCard2: UIImageView!
+    @IBOutlet weak var topCompNum2: UILabel!
+    @IBOutlet weak var bottomCompNum2: UILabel!
     
     
     var playingDeck: DeckOfCards!
@@ -33,8 +47,7 @@ class PlaySpace: UIViewController {
 
     
     @IBAction func goButton(_ sender: UIButton) {
-        //hello
-        
+        hide()
         var playerNum: Int = 0
         var compNum: Int = 0
         var tempTuple: (Int, suit2)
@@ -49,6 +62,8 @@ class PlaySpace: UIViewController {
         topPlayerNumber.text = "\(tempTuple.0)"
         bottomPlayerNumber.text = "\(tempTuple.0)"
         
+        
+    if tempTuple.0 != 500 {
         switch tempTuple.1 {
         case .hearts:
             playerSymbol.image = UIImage(contentsOfFile: "cardHeart")
@@ -61,10 +76,58 @@ class PlaySpace: UIViewController {
         default:
             print("") //nothing
         }
+        tempTuple = playingDeck.drawACard()
+        topCompNumber.text = "\(tempTuple.0)"
+        bottomCompNumber.text = "\(tempTuple.0)"
+        
+        if topCompNumber.text == topPlayerNumber.text {
+                  goBtn.isHidden = true
+                  delay()
+              }
+        } else { //if end of deck
+            print("empty deck")
+            hide()
+            goBtn.isHidden = true
+            plainPlayerCard.isHidden = true
+            plainCompCard.isHidden = true
+            topPlayerNumber.isHidden = true
+            bottomPlayerNumber.isHidden = true
+            topCompNumber.isHidden = true
+            bottomCompNumber.isHidden = true
+              }
 
     }
     
+    func hide() {
+           playerSymbol.isHidden = true
+           compWarCard1.isHidden = true
+           compWarCard2.isHidden = true
+           compWarCard3.isHidden = true
+           playerWarCard1.isHidden = true
+           playerWarCard2.isHidden = true
+           playerWarCard3.isHidden = true
+       }
+       
 
-   
+   func delay() {
+       let secondsToDelay = 0.7
+          self.warLabel.isHidden = false
+       DispatchQueue.main.asyncAfter(deadline: .now() + secondsToDelay) {
+           self.warLabel.isHidden = true
+           self.playerWarCard1.isHidden = false
+           self.compWarCard1.isHidden = false
+                  DispatchQueue.main.asyncAfter(deadline: .now() + secondsToDelay) {
+                   self.playerWarCard2.isHidden = false
+                   self.compWarCard2.isHidden = false
+                      DispatchQueue.main.asyncAfter(deadline: .now() + secondsToDelay) {
+                   self.playerWarCard3.isHidden = false
+                   self.compWarCard3.isHidden = false
+                          self.warLabel.isHidden = true
+                        self.goBtn.isHidden = false
+                   }
+                  }
+                 }
+               
+   }
 
 }
