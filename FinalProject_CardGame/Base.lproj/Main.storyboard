@@ -243,6 +243,8 @@
                         <outlet property="compWarCard2" destination="cLN-cM-AfK" id="61z-Ie-yGh"/>
                         <outlet property="compWarCard3" destination="vnP-ym-TP6" id="qU1-q4-dgW"/>
                         <outlet property="goBtn" destination="OZx-7w-U6d" id="LR2-Vw-5tr"/>
+                        <outlet property="numCardsCompLabel" destination="aVD-qk-3RN" id="0t0-w0-q5f"/>
+                        <outlet property="numCardsPlayerLabel" destination="2q9-UB-JEY" id="zpF-WR-7f4"/>
                         <outlet property="plainCompCard" destination="ljv-8p-5tP" id="MzQ-Og-ln8"/>
                         <outlet property="plainCompCard2" destination="bCZ-sb-Efm" id="KvA-Hq-Dyl"/>
                         <outlet property="plainPlayerCard" destination="gLF-UC-rk8" id="Oqv-7r-DK3"/>

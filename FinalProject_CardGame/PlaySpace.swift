@@ -22,6 +22,7 @@ class PlaySpace: UIViewController {
     @IBOutlet weak var plainPlayerCard2: UIImageView!
     @IBOutlet weak var topPlayerNum2: UILabel!
     @IBOutlet weak var bottomPlayerNum2: UILabel!
+    @IBOutlet weak var numCardsPlayerLabel: UILabel!
     
     
     @IBOutlet weak var plainCompCard: UIImageView!
@@ -35,6 +36,7 @@ class PlaySpace: UIViewController {
     @IBOutlet weak var plainCompCard2: UIImageView!
     @IBOutlet weak var topCompNum2: UILabel!
     @IBOutlet weak var bottomCompNum2: UILabel!
+    @IBOutlet weak var numCardsCompLabel: UILabel!
     
     
     var playingDeck: DeckOfCards!
@@ -109,11 +111,13 @@ class PlaySpace: UIViewController {
               compCards += (2 + tieCards)
               tieCards = 0
               numCardsCompLabel.text = "Number Of Cards Collected \(compCards)/52"
-        
+        }
         if topCompNumber.text == topPlayerNumber.text {
                   goBtn.isHidden = true
                   delay()
               }
+        
+        
         } else { //if end of deck
             print("empty deck")
             hide()
@@ -136,6 +140,8 @@ class PlaySpace: UIViewController {
            playerWarCard1.isHidden = true
            playerWarCard2.isHidden = true
            playerWarCard3.isHidden = true
+        plainPlayerCard2.isHidden = true
+        plainCompCard2.isHidden = true
        }
        
 
@@ -153,7 +159,11 @@ class PlaySpace: UIViewController {
                    self.playerWarCard3.isHidden = false
                    self.compWarCard3.isHidden = false
                           self.warLabel.isHidden = true
+                          DispatchQueue.main.asyncAfter(deadline: .now() + secondsToDelay) {
                         self.goBtn.isHidden = false
+                            self.plainPlayerCard2.isHidden = false
+                            self.plainCompCard2.isHidden = false
+                        }
                    }
                   }
                  }
@@ -161,4 +171,5 @@ class PlaySpace: UIViewController {
    }
 
 }
-}
+
+
