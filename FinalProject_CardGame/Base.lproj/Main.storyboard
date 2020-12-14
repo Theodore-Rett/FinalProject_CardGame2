@@ -201,6 +201,8 @@
                         <outlet property="bottomCompNumber" destination="PeT-tn-jhY" id="dUL-HT-5Qx"/>
                         <outlet property="bottomPlayerNumber" destination="SF3-Ls-qax" id="C5g-B3-0bj"/>
                         <outlet property="compSymbol" destination="k8Z-Kv-bqM" id="M2b-mm-dzx"/>
+                        <outlet property="numCardsCompLabel" destination="aVD-qk-3RN" id="7lM-db-ipA"/>
+                        <outlet property="numCardsPlayerLabel" destination="2q9-UB-JEY" id="S3L-3n-u0l"/>
                         <outlet property="plainCompCard" destination="ljv-8p-5tP" id="MzQ-Og-ln8"/>
                         <outlet property="plainPlayerCard" destination="gLF-UC-rk8" id="Oqv-7r-DK3"/>
                         <outlet property="playerSymbol" destination="TOk-ry-Kwt" id="Y2V-g3-v3s"/>
