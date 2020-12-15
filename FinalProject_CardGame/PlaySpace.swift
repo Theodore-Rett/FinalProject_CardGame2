@@ -62,8 +62,10 @@ class PlaySpace: UIViewController {
         playerSymbol.isHidden = false
         compSymbol.isHidden = false
         tempTuple = playingDeck.drawACard()
-        if tempTuple.0 != 500 {
         playerNum = tempTuple.0
+
+        if tempTuple.0 != 500 {
+       
         if (tempTuple.0 < 11 && tempTuple.0 > 1)  {
         topPlayerNumber.text = "\(tempTuple.0)"
         bottomPlayerNumber.text =  "\(tempTuple.0)"
@@ -109,7 +111,9 @@ class PlaySpace: UIViewController {
             print("") //nothing
         }
             }
+            
         tempTuple = playingDeck.drawACard()
+            compNum = tempTuple.0
             if (tempTuple.0 < 11 && tempTuple.0 > 1)  {
                    topCompNumber.text = "\(tempTuple.0)"
                    bottomCompNumber.text =  "\(tempTuple.0)"
@@ -134,12 +138,12 @@ class PlaySpace: UIViewController {
                                   bottomCompNumber.text =  "K"
                                   compSymbol.image = UIImage(named: "cardKing")
                    }
-        topCompNumber.text = "\(tempTuple.0)"
-        bottomCompNumber.text = "\(tempTuple.0)"
-         compNum = tempTuple.0
+//        topCompNumber.text = "\(tempTuple.0)"
+//        bottomCompNumber.text = "\(tempTuple.0)"
+         
 //              topCompNumber.text = "\(tempTuple.0)"
 //              bottomCompNumber.text = "\(tempTuple.0)"
-          if tempTuple.0 != 500 && tempTuple.0 < 11{
+          if tempTuple.0 > 1 && tempTuple.0 < 11{
               switch tempTuple.1 {
               case .hearts:
                 compSymbol.image = UIImage(named: "cardHeart")
@@ -151,6 +155,10 @@ class PlaySpace: UIViewController {
                   compSymbol.image = UIImage(named: "spadeSuit")
           }
             }
+
+          if (playerNum == compNum) {
+              tieCards += 2
+          }
           else if ( playerNum > compNum) {
               playerCards += (2+tieCards)
               tieCards = 0
@@ -178,6 +186,7 @@ class PlaySpace: UIViewController {
             bottomPlayerNumber.isHidden = true
             topCompNumber.isHidden = true
             bottomCompNumber.isHidden = true
+            compSymbol.isHidden = true
               }
         print(playerNum)
         print(compNum)
