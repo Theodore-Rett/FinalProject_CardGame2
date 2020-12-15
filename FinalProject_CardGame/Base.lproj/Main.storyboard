@@ -228,6 +228,22 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RSq-Qw-NGj">
+                                <rect key="frame" x="4" y="602" width="62" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="home"/>
+                                <connections>
+                                    <segue destination="UVl-ye-42g" kind="unwind" unwindAction="unwind:" id="RBg-M9-LG9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ZW-Wx-DZf">
+                                <rect key="frame" x="317" y="608" width="46" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="restart"/>
+                                <connections>
+                                    <action selector="restartButton:" destination="1Nx-8T-EPy" eventType="touchUpInside" id="0AD-H9-3iS"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.1853266033" green="0.30280377539999997" blue="0.18438355470000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="0Vu-yj-0Az"/>
@@ -270,6 +286,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hnv-el-a0Y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="UVl-ye-42g" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1776.8" y="112.89355322338831"/>
         </scene>
@@ -293,8 +310,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="home" width="4096" height="4096"/>
         <image name="plainCard" width="366" height="512"/>
         <image name="playingCard" width="366" height="512"/>
+        <image name="restart" width="4096" height="4096"/>
         <image name="swords" width="4096" height="4096"/>
     </resources>
 </document>

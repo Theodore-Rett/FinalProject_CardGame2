@@ -142,6 +142,26 @@ class PlaySpace: UIViewController {
 
     }
     
+    @IBAction func restartButton(_ sender: UIButton) {
+        playingDeck = DeckOfCards()
+        playerCards = 0
+        compCards = 0
+        tieCards = 0
+        hide()
+        plainPlayerCard.isHidden = true
+        plainCompCard.isHidden = true
+        playerSymbol.isHidden = true
+        compSymbol.isHidden = true
+        topPlayerNumber.text = ""
+        bottomPlayerNumber.text = ""
+        topCompNumber.text = ""
+        bottomCompNumber.text = ""
+        goBtn.isHidden = false
+        starterCard.isHidden = false
+        starterCard2.isHidden = false
+    }
+    
+    
     func hide() {
            playerSymbol.isHidden = true
            compWarCard1.isHidden = true
@@ -153,8 +173,7 @@ class PlaySpace: UIViewController {
         plainPlayerCard2.isHidden = true
         plainCompCard2.isHidden = true
        }
-       
-
+    
    func delay() {
        let secondsToDelay = 0.7
           self.warLabel.isHidden = false
