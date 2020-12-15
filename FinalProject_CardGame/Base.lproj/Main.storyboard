@@ -160,14 +160,6 @@
                                     <action selector="goButton:" destination="1Nx-8T-EPy" eventType="touchUpInside" id="Owb-Fl-0VR"/>
                                 </connections>
                             </button>
-                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cardDiamond" translatesAutoresizingMaskIntoConstraints="NO" id="TOk-ry-Kwt">
-                                <rect key="frame" x="8" y="162" width="152" height="209"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cardDiamond" translatesAutoresizingMaskIntoConstraints="NO" id="k8Z-Kv-bqM">
-                                <rect key="frame" x="207" y="162" width="152" height="209"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="playingCard" translatesAutoresizingMaskIntoConstraints="NO" id="EHC-Ai-ZdM">
                                 <rect key="frame" x="1" y="218" width="168" height="214"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -198,6 +190,14 @@
                             </imageView>
                             <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="plainCard" translatesAutoresizingMaskIntoConstraints="NO" id="bCZ-sb-Efm">
                                 <rect key="frame" x="196" y="379" width="185" height="214"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TOk-ry-Kwt">
+                                <rect key="frame" x="8" y="162" width="152" height="209"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="k8Z-Kv-bqM">
+                                <rect key="frame" x="207" y="162" width="152" height="209"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wbW-Uy-7sw">
@@ -293,7 +293,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="cardDiamond" width="366" height="512"/>
         <image name="plainCard" width="366" height="512"/>
         <image name="playingCard" width="366" height="512"/>
         <image name="swords" width="4096" height="4096"/>

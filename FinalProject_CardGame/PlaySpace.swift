@@ -64,20 +64,30 @@ class PlaySpace: UIViewController {
         compSymbol.isHidden = false
         tempTuple = playingDeck.drawACard()
         playerNum = tempTuple.0
+        if (tempTuple.0 < 11)  {
         topPlayerNumber.text = "\(tempTuple.0)"
         bottomPlayerNumber.text = "\(tempTuple.0)"
-        
+            }
+        else {
+            //we need to add images
+        }
         
     if tempTuple.0 != 500 {
         switch tempTuple.1 {
         case .hearts:
-            playerSymbol.image = UIImage(contentsOfFile: "cardHeart")
+
+            playerSymbol.image = UIImage(named: "cardHeart")
+
         case .diamonds:
-            playerSymbol.image = UIImage(contentsOfFile: "cardDiamond")
+
+            playerSymbol.image = UIImage(named: "cardDiamond")
+
         case .clubs:
-            playerSymbol.image = UIImage(contentsOfFile: "cardClub")
+            playerSymbol.image = UIImage(named: "clubsSuit")
+
         case .spades:
-            playerSymbol.image = UIImage(contentsOfFile: "cardSpade")
+            playerSymbol.image = UIImage(named: "spadeSuit")
+
         default:
             print("") //nothing
         }
@@ -90,13 +100,13 @@ class PlaySpace: UIViewController {
           
               switch tempTuple.1 {
               case .hearts:
-                compSymbol.image = UIImage(contentsOfFile: "cardHeart")
+                compSymbol.image = UIImage(named: "cardHeart")
               case .diamonds:
-                  compSymbol.image = UIImage(contentsOfFile: "cardDiamond")
+                  compSymbol.image = UIImage(named: "cardDiamond")
               case .clubs:
-                  compSymbol.image = UIImage(contentsOfFile: "cardClub")
+                  compSymbol.image = UIImage(named: "clubsSuit")
               case .spades:
-                  compSymbol.image = UIImage(contentsOfFile: "cardSpade")
+                  compSymbol.image = UIImage(named: "spadeSuit")
           }
 
           if (playerNum == compNum) {
