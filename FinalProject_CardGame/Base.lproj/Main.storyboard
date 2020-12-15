@@ -192,6 +192,14 @@
                                 <rect key="frame" x="194" y="328" width="185" height="214"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ub9-xt-iH8">
+                                <rect key="frame" x="4" y="621" width="41" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="home"/>
+                                <connections>
+                                    <segue destination="UHd-JG-sje" kind="unwind" unwindAction="unwind:" id="nXR-hL-3UO"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.1853266033" green="0.30280377539999997" blue="0.18438355470000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="0Vu-yj-0Az"/>
@@ -211,6 +219,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hnv-el-a0Y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="UHd-JG-sje" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1776.8" y="112.89355322338831"/>
         </scene>
@@ -235,6 +244,7 @@
     </scenes>
     <resources>
         <image name="cardDiamond" width="366" height="512"/>
+        <image name="home" width="4096" height="4096"/>
         <image name="plainCard" width="366" height="512"/>
         <image name="playingCard" width="366" height="512"/>
         <image name="swords" width="4096" height="4096"/>

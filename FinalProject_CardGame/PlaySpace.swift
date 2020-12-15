@@ -33,8 +33,6 @@ class PlaySpace: UIViewController {
 
     
     @IBAction func goButton(_ sender: UIButton) {
-        //hello
-        
         var playerNum: Int = 0
         var compNum: Int = 0
         var tempTuple: (Int, suit2)
