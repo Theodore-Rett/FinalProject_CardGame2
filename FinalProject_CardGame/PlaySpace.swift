@@ -63,6 +63,7 @@ class PlaySpace: UIViewController {
         playerSymbol.isHidden = false
         compSymbol.isHidden = false
         tempTuple = playingDeck.drawACard()
+        if tempTuple.0 != 500 {
         playerNum = tempTuple.0
         if (tempTuple.0 < 11 && tempTuple.0 > 1)  {
         topPlayerNumber.text = "\(tempTuple.0)"
@@ -89,7 +90,7 @@ class PlaySpace: UIViewController {
                        playerSymbol.image = UIImage(named: "cardKing")
         }
         
-        if tempTuple.0 != 500 && tempTuple.0 < 11{
+        if tempTuple.0 < 11{
         switch tempTuple.1 {
         case .hearts:
 
@@ -170,7 +171,8 @@ class PlaySpace: UIViewController {
               }
         
         
-        } else { //if end of deck
+        }
+        }else { //if end of deck
             print("empty deck")
             hide()
             goBtn.isHidden = true
