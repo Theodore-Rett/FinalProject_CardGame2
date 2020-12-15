@@ -63,8 +63,10 @@ class PlaySpace: UIViewController {
         playerSymbol.isHidden = false
         compSymbol.isHidden = false
         tempTuple = playingDeck.drawACard()
-        if tempTuple.0 != 500 {
         playerNum = tempTuple.0
+
+        if tempTuple.0 != 500 {
+       
         if (tempTuple.0 < 11 && tempTuple.0 > 1)  {
         topPlayerNumber.text = "\(tempTuple.0)"
         bottomPlayerNumber.text =  "\(tempTuple.0)"
@@ -90,7 +92,7 @@ class PlaySpace: UIViewController {
                        playerSymbol.image = UIImage(named: "cardKing")
         }
         
-        if tempTuple.0 < 11{
+            if tempTuple.0 < 11 && tempTuple.0 > 1{
         switch tempTuple.1 {
         case .hearts:
 
@@ -109,7 +111,10 @@ class PlaySpace: UIViewController {
         default:
             print("") //nothing
         }
+            }
+            
         tempTuple = playingDeck.drawACard()
+            compNum = tempTuple.0
             if (tempTuple.0 < 11 && tempTuple.0 > 1)  {
                    topCompNumber.text = "\(tempTuple.0)"
                    bottomCompNumber.text =  "\(tempTuple.0)"
@@ -136,10 +141,10 @@ class PlaySpace: UIViewController {
                    }
 //        topCompNumber.text = "\(tempTuple.0)"
 //        bottomCompNumber.text = "\(tempTuple.0)"
-         compNum = tempTuple.0
+         
 //              topCompNumber.text = "\(tempTuple.0)"
 //              bottomCompNumber.text = "\(tempTuple.0)"
-          if tempTuple.0 != 500 && tempTuple.0 < 11{
+          if tempTuple.0 > 1 && tempTuple.0 < 11{
               switch tempTuple.1 {
               case .hearts:
                 compSymbol.image = UIImage(named: "cardHeart")
@@ -172,7 +177,8 @@ class PlaySpace: UIViewController {
         
         
         }
-        }else { //if end of deck
+        
+    else { //if end of deck
             print("empty deck")
             hide()
             goBtn.isHidden = true
@@ -182,6 +188,7 @@ class PlaySpace: UIViewController {
             bottomPlayerNumber.isHidden = true
             topCompNumber.isHidden = true
             bottomCompNumber.isHidden = true
+            compSymbol.isHidden = true
               }
 
     }
