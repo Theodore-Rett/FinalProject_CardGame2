@@ -64,15 +64,15 @@ class PlaySpace: UIViewController {
         compSymbol.isHidden = false
         tempTuple = playingDeck.drawACard()
         playerNum = tempTuple.0
-        if (tempTuple.0 < 11)  {
+        if (tempTuple.0 < 11 && tempTuple.0 > 1)  {
         topPlayerNumber.text = "\(tempTuple.0)"
         bottomPlayerNumber.text = "\(tempTuple.0)"
             }
-        else {
-            //we need to add images
+        else  {
+            
         }
         
-    if tempTuple.0 != 500 {
+        if tempTuple.0 != 500 && tempTuple.0 < 11{
         switch tempTuple.1 {
         case .hearts:
 
