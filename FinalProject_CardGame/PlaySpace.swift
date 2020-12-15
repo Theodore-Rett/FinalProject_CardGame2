@@ -62,7 +62,7 @@ class PlaySpace: UIViewController {
 
     }
     
-
-   
-
+    @IBAction func restartButton(_ sender: UIButton) {
+        playingDeck = DeckOfCards()
+    }
 }
