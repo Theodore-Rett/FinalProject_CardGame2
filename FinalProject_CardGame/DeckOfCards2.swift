@@ -27,9 +27,9 @@ class DeckOfCards{
    
     func drawACard() -> (Int, suit2) {
     while (deckNum.isEmpty == false) {
-        var rand = Int.random(in: 0...deckNum.count-1 )
-        var tempNum: Int = deckNum[rand]
-        var tempSuit: suit2 = deckSuit[rand]
+        let rand = Int.random(in: 0...deckNum.count-1 )
+        let tempNum: Int = deckNum[rand]
+        let tempSuit: suit2 = deckSuit[rand]
         deckNum.remove(at: rand)
         deckSuit.remove(at: rand)
         print(deckNum)

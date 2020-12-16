@@ -64,15 +64,35 @@ class PlaySpace: UIViewController {
         compSymbol.isHidden = false
         tempTuple = playingDeck.drawACard()
         playerNum = tempTuple.0
+
+        if tempTuple.0 != 500 {
+       
         if (tempTuple.0 < 11 && tempTuple.0 > 1)  {
         topPlayerNumber.text = "\(tempTuple.0)"
-        bottomPlayerNumber.text = "\(tempTuple.0)"
+        bottomPlayerNumber.text =  "\(tempTuple.0)"
             }
-        else  {
-            
+        else if tempTuple.0 == 1 {
+            topPlayerNumber.text = "A"
+            bottomPlayerNumber.text =  "A"
+            playerSymbol.image = UIImage(named: "cardAce")
+        }
+        else if tempTuple.0 == 11 {
+            topPlayerNumber.text = "J"
+                       bottomPlayerNumber.text =  "J"
+                       playerSymbol.image = UIImage(named: "cardJack")
+        }
+        else if tempTuple.0 == 12 {
+            topPlayerNumber.text = "Q"
+                       bottomPlayerNumber.text =  "Q"
+                       playerSymbol.image = UIImage(named: "cardQueen")
+        }
+        else if tempTuple.0 == 13 {
+            topPlayerNumber.text = "K"
+                       bottomPlayerNumber.text =  "K"
+                       playerSymbol.image = UIImage(named: "cardKing")
         }
         
-        if tempTuple.0 != 500 && tempTuple.0 < 11{
+            if tempTuple.0 < 11 && tempTuple.0 > 1{
         switch tempTuple.1 {
         case .hearts:
 
@@ -91,13 +111,40 @@ class PlaySpace: UIViewController {
         default:
             print("") //nothing
         }
+            }
+            
         tempTuple = playingDeck.drawACard()
-        topCompNumber.text = "\(tempTuple.0)"
-        bottomCompNumber.text = "\(tempTuple.0)"
-          compNum = tempTuple.0
-              topCompNumber.text = "\(tempTuple.0)"
-              bottomCompNumber.text = "\(tempTuple.0)"
-          
+            compNum = tempTuple.0
+            if (tempTuple.0 < 11 && tempTuple.0 > 1)  {
+                   topCompNumber.text = "\(tempTuple.0)"
+                   bottomCompNumber.text =  "\(tempTuple.0)"
+                       }
+                   else if tempTuple.0 == 1 {
+                       topCompNumber.text = "A"
+                       bottomCompNumber.text =  "A"
+                       compSymbol.image = UIImage(named: "cardAce")
+                   }
+                   else if tempTuple.0 == 11 {
+                       topCompNumber.text = "J"
+                                  bottomCompNumber.text =  "J"
+                                  compSymbol.image = UIImage(named: "cardJack")
+                   }
+                   else if tempTuple.0 == 12 {
+                       topCompNumber.text = "Q"
+                                  bottomCompNumber.text =  "Q"
+                                  compSymbol.image = UIImage(named: "cardQueen")
+                   }
+                   else if tempTuple.0 == 13 {
+                       topCompNumber.text = "K"
+                                  bottomCompNumber.text =  "K"
+                                  compSymbol.image = UIImage(named: "cardKing")
+                   }
+//        topCompNumber.text = "\(tempTuple.0)"
+//        bottomCompNumber.text = "\(tempTuple.0)"
+         
+//              topCompNumber.text = "\(tempTuple.0)"
+//              bottomCompNumber.text = "\(tempTuple.0)"
+          if tempTuple.0 > 1 && tempTuple.0 < 11{
               switch tempTuple.1 {
               case .hearts:
                 compSymbol.image = UIImage(named: "cardHeart")
@@ -108,6 +155,7 @@ class PlaySpace: UIViewController {
               case .spades:
                   compSymbol.image = UIImage(named: "spadeSuit")
           }
+            }
 
           if (playerNum == compNum) {
               tieCards += 2
@@ -128,7 +176,9 @@ class PlaySpace: UIViewController {
               }
         
         
-        } else { //if end of deck
+        }
+        
+    else { //if end of deck
             print("empty deck")
             hide()
             goBtn.isHidden = true
@@ -138,6 +188,7 @@ class PlaySpace: UIViewController {
             bottomPlayerNumber.isHidden = true
             topCompNumber.isHidden = true
             bottomCompNumber.isHidden = true
+            compSymbol.isHidden = true
               }
 
     }
