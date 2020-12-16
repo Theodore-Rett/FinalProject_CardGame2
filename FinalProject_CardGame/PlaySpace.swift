@@ -215,11 +215,19 @@ class PlaySpace: UIViewController {
         bottomPlayerNumber.text = ""
         topCompNumber.text = ""
         bottomCompNumber.text = ""
+        topPlayerNumber.isHidden = false
+        bottomPlayerNumber.isHidden = false
+        topCompNumber.isHidden = false
+        bottomCompNumber.isHidden = false
         goBtn.isHidden = false
         starterCard.isHidden = false
         starterCard2.isHidden = false
         numCardsPlayerLabel.text = "Number Of Cards Collected \(compCards)/52"
         numCardsCompLabel.text = "Number Of Cards Collected \(compCards)/52"
+        computerLabel.isHidden = false
+        youLabel.isHidden = false
+        numCardsPlayerLabel.isHidden = false
+        numCardsCompLabel.isHidden = false
     }
     
     
