@@ -9,6 +9,8 @@
 import UIKit
 
 class PlaySpace: UIViewController {
+    @IBOutlet weak var youLabel: UILabel!
+    @IBOutlet weak var computerLabel: UILabel!
     @IBOutlet weak var plainPlayerCard: UIImageView!
     @IBOutlet weak var topPlayerNumber: UILabel!
     @IBOutlet weak var bottomPlayerNumber: UILabel!
@@ -23,6 +25,7 @@ class PlaySpace: UIViewController {
     @IBOutlet weak var topPlayerNum2: UILabel!
     @IBOutlet weak var bottomPlayerNum2: UILabel!
     @IBOutlet weak var numCardsPlayerLabel: UILabel!
+    @IBOutlet weak var playerSymbol2: UIImageView!
     
     
     @IBOutlet weak var plainCompCard: UIImageView!
@@ -37,8 +40,11 @@ class PlaySpace: UIViewController {
     @IBOutlet weak var topCompNum2: UILabel!
     @IBOutlet weak var bottomCompNum2: UILabel!
     @IBOutlet weak var numCardsCompLabel: UILabel!
+    @IBOutlet weak var compSymbol2: UIImageView!
     
-    
+    var playerNum = 0
+    var compNum = 0
+    var tempTuple: (Int, suit2)!
     var playingDeck: DeckOfCards!
     var playerCards = 0
     var compCards = 0
@@ -53,13 +59,9 @@ class PlaySpace: UIViewController {
     
     @IBAction func goButton(_ sender: UIButton) {
         hide()
-        var playerNum: Int = 0
-        var compNum: Int = 0
-        var tempTuple: (Int, suit2)
+        //tieCards = 0
         plainPlayerCard.isHidden = false
         plainCompCard.isHidden = false
-        starterCard.isHidden = true
-        starterCard2.isHidden = true
         playerSymbol.isHidden = false
         compSymbol.isHidden = false
         tempTuple = playingDeck.drawACard()
@@ -139,11 +141,10 @@ class PlaySpace: UIViewController {
                                   bottomCompNumber.text =  "K"
                                   compSymbol.image = UIImage(named: "cardKing")
                    }
-//        topCompNumber.text = "\(tempTuple.0)"
-//        bottomCompNumber.text = "\(tempTuple.0)"
-         
-//              topCompNumber.text = "\(tempTuple.0)"
-//              bottomCompNumber.text = "\(tempTuple.0)"
+
+            
+            
+            
           if tempTuple.0 > 1 && tempTuple.0 < 11{
               switch tempTuple.1 {
               case .hearts:
@@ -156,7 +157,7 @@ class PlaySpace: UIViewController {
                   compSymbol.image = UIImage(named: "spadeSuit")
           }
             }
-
+            //scoring
           if (playerNum == compNum) {
               tieCards += 2
           }
@@ -169,18 +170,21 @@ class PlaySpace: UIViewController {
               compCards += (2 + tieCards)
               tieCards = 0
               numCardsCompLabel.text = "Number Of Cards Collected \(compCards)/52"
-        }
-        if topCompNumber.text == topPlayerNumber.text {
-                  goBtn.isHidden = true
-                  delay()
-              }
-        
-        
-        }
-        
-    else { //if end of deck
+            }
+
+            if playerNum == compNum {
+                      goBtn.isHidden = true
+                      delay()
+                  }
+            
+            
+        }else { //if end of deck
             print("empty deck")
             hide()
+            youLabel.isHidden = true
+            computerLabel.isHidden = true
+            numCardsCompLabel.isHidden = true
+            numCardsPlayerLabel.isHidden = true
             goBtn.isHidden = true
             plainPlayerCard.isHidden = true
             plainCompCard.isHidden = true
@@ -190,8 +194,12 @@ class PlaySpace: UIViewController {
             bottomCompNumber.isHidden = true
             compSymbol.isHidden = true
               }
+        print(playerNum)
+        print(compNum)
 
     }
+
+
     
     @IBAction func restartButton(_ sender: UIButton) {
         playingDeck = DeckOfCards()
@@ -217,6 +225,11 @@ class PlaySpace: UIViewController {
     
     func hide() {
            playerSymbol.isHidden = true
+        compSymbol.isHidden = true
+        playerSymbol2.isHidden = true
+        compSymbol2.isHidden = true
+        starterCard.isHidden = true
+        starterCard2.isHidden = true
            compWarCard1.isHidden = true
            compWarCard2.isHidden = true
            compWarCard3.isHidden = true
@@ -225,6 +238,11 @@ class PlaySpace: UIViewController {
            playerWarCard3.isHidden = true
         plainPlayerCard2.isHidden = true
         plainCompCard2.isHidden = true
+        topPlayerNum2.isHidden = true
+        bottomPlayerNum2.isHidden = true
+        topCompNum2.isHidden = true
+        bottomCompNum2.isHidden = true
+        
        }
     
    func delay() {
@@ -245,6 +263,7 @@ class PlaySpace: UIViewController {
                         self.goBtn.isHidden = false
                             self.plainPlayerCard2.isHidden = false
                             self.plainCompCard2.isHidden = false
+                            self.doubleWar()
                         }
                    }
                   }
@@ -252,6 +271,138 @@ class PlaySpace: UIViewController {
                
    }
 
+    
+    func doubleWar() {
+    playerSymbol2.isHidden = false
+    compSymbol2.isHidden = false
+    topPlayerNum2.isHidden = false
+    bottomPlayerNum2.isHidden = false
+    topCompNum2.isHidden = false
+    bottomCompNum2.isHidden = false
+        //do-while loop so that is at least does it once
+        //called repeat-while loop in swift
+        repeat {
+        
+        tempTuple = playingDeck.drawACard()
+            if tempTuple.0 != 500 {
+                playerNum = tempTuple.0
+                if (tempTuple.0 < 11 && tempTuple.0 > 1)  {
+                    topPlayerNum2.text = "\(tempTuple.0)"
+                    bottomPlayerNum2.text =  "\(tempTuple.0)"
+                    }
+                else if tempTuple.0 == 1 {
+                            topPlayerNum2.text = "A"
+                            bottomPlayerNum2.text =  "A"
+                            playerSymbol2.image = UIImage(named: "cardAce")
+                        }
+                        else if tempTuple.0 == 11 {
+                            topPlayerNum2.text = "J"
+                                       bottomPlayerNum2.text =  "J"
+                                    playerSymbol2.image = UIImage(named: "cardJack")
+                        }
+                        else if tempTuple.0 == 12 {
+                            topPlayerNum2.text = "Q"
+                                       bottomPlayerNum2.text =  "Q"
+                                      playerSymbol2.image = UIImage(named: "cardQueen")
+                        }
+                        else if tempTuple.0 == 13 {
+                            topPlayerNum2.text = "K"
+                                       bottomPlayerNum2.text =  "K"
+                                      playerSymbol2.image = UIImage(named: "cardKing")
+                        }
+                        if tempTuple.0 < 11 && tempTuple.0 > 1{
+                               switch tempTuple.1 {
+                               case .hearts:
+
+                                   playerSymbol2.image = UIImage(named: "cardHeart")
+
+                               case .diamonds:
+
+                                   playerSymbol2.image = UIImage(named: "cardDiamond")
+
+                               case .clubs:
+                                   playerSymbol2.image = UIImage(named: "clubsSuit")
+
+                               case .spades:
+                                   playerSymbol2.image = UIImage(named: "spadeSuit")
+
+                               default:
+                                   print("") //nothing
+                               }
+                                   }
+                               tempTuple = playingDeck.drawACard()
+                                    compNum = tempTuple.0
+                                   if (tempTuple.0 < 11 && tempTuple.0 > 1)  {
+                                          topCompNum2.text = "\(tempTuple.0)"
+                                          bottomCompNum2.text =  "\(tempTuple.0)"
+                                              }
+                                          else if tempTuple.0 == 1 {
+                                              topCompNum2.text = "A"
+                                              bottomCompNum2.text =  "A"
+                                              compSymbol2.image = UIImage(named: "cardAce")
+                                          }
+                                          else if tempTuple.0 == 11 {
+                                              topCompNum2.text = "J"
+                                                         bottomCompNum2.text =  "J"
+                                                         compSymbol2.image = UIImage(named: "cardJack")
+                                          }
+                                          else if tempTuple.0 == 12 {
+                                              topCompNum2.text = "Q"
+                                                         bottomCompNum2.text =  "Q"
+                                                         compSymbol2.image = UIImage(named: "cardQueen")
+                                          }
+                                          else if tempTuple.0 == 13 {
+                                              topCompNum2.text = "K"
+                                                         bottomCompNum2.text =  "K"
+                                                         compSymbol2.image = UIImage(named: "cardKing")
+                                          }
+                               
+      
+                                 if tempTuple.0 > 1 && tempTuple.0 < 11 {
+                                     switch tempTuple.1 {
+                                     case .hearts:
+                                       compSymbol2.image = UIImage(named: "cardHeart")
+                                     case .diamonds:
+                                         compSymbol2.image = UIImage(named: "cardDiamond")
+                                     case .clubs:
+                                         compSymbol2.image = UIImage(named: "clubsSuit")
+                                     case .spades:
+                                         compSymbol2.image = UIImage(named: "spadeSuit")
+                                 }
+                                    //scoring
+                                   }
+                                    if (playerNum == compNum) {
+                                                 tieCards += 2
+                                    } else if ( playerNum > compNum) {
+                                     playerCards += (2+tieCards)
+                                     tieCards = 0
+                                     numCardsPlayerLabel.text = "Number Of Cards Collected \(playerCards)/52"
+                                 }
+                                 else {
+                                     compCards += (2 + tieCards)
+                                     tieCards = 0
+                                     numCardsCompLabel.text = "Number Of Cards Collected \(compCards)/52"
+                                    }
+                                   
+                                   
+                               }else { //if end of deck
+                                   print("empty deck")
+                                   hide()
+                                   goBtn.isHidden = true
+                                   plainPlayerCard.isHidden = true
+                                   plainCompCard.isHidden = true
+                                   topPlayerNumber.isHidden = true
+                                   bottomPlayerNumber.isHidden = true
+                                   topCompNumber.isHidden = true
+                                   bottomCompNumber.isHidden = true
+                                     }
+                               print(playerNum)
+                               print(compNum)
+
+                           } while (playerNum == compNum)
+                           
+                    }
 }
+
 
 
