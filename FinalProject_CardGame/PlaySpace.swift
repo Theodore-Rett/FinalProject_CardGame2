@@ -210,6 +210,8 @@ class PlaySpace: UIViewController {
         goBtn.isHidden = false
         starterCard.isHidden = false
         starterCard2.isHidden = false
+        numCardsPlayerLabel.text = "Number Of Cards Collected \(compCards)/52"
+        numCardsCompLabel.text = "Number Of Cards Collected \(compCards)/52"
     }
     
     
