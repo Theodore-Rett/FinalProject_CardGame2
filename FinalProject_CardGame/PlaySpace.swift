@@ -41,6 +41,7 @@ class PlaySpace: UIViewController {
     @IBOutlet weak var bottomCompNum2: UILabel!
     @IBOutlet weak var numCardsCompLabel: UILabel!
     @IBOutlet weak var compSymbol2: UIImageView!
+    @IBOutlet weak var outcomeLabel: UILabel!
     
     var playerNum = 0
     var compNum = 0
@@ -68,7 +69,6 @@ class PlaySpace: UIViewController {
         playerNum = tempTuple.0
 
         if tempTuple.0 != 500 {
-       
         if (tempTuple.0 < 11 && tempTuple.0 > 1)  {
         topPlayerNumber.text = "\(tempTuple.0)"
         bottomPlayerNumber.text =  "\(tempTuple.0)"
@@ -193,9 +193,20 @@ class PlaySpace: UIViewController {
             topCompNumber.isHidden = true
             bottomCompNumber.isHidden = true
             compSymbol.isHidden = true
+            if(playerCards > compCards){
+                outcomeLabel.text = "You win!"
+                outcomeLabel.isHidden = false
+            } else if(playerCards < compCards){
+                outcomeLabel.text = "You lose..."
+                outcomeLabel.isHidden = false
+            }else if(playerCards == compCards){
+                outcomeLabel.text = "It's a tie."
+                outcomeLabel.isHidden = false
+            }
               }
         print(playerNum)
         print(compNum)
+        
 
     }
 
@@ -250,7 +261,7 @@ class PlaySpace: UIViewController {
         bottomPlayerNum2.isHidden = true
         topCompNum2.isHidden = true
         bottomCompNum2.isHidden = true
-        
+        outcomeLabel.isHidden = true
        }
     
    func delay() {
@@ -403,6 +414,17 @@ class PlaySpace: UIViewController {
                                    bottomPlayerNumber.isHidden = true
                                    topCompNumber.isHidden = true
                                    bottomCompNumber.isHidden = true
+                if(playerCards > compCards){
+                    outcomeLabel.text = "You win!"
+                    outcomeLabel.isHidden = false
+                } else if(playerCards < compCards){
+                    outcomeLabel.text = "You lose..."
+                    outcomeLabel.isHidden = false
+                }else if(playerCards == compCards){
+                    outcomeLabel.text = "It's a tie."
+                    outcomeLabel.isHidden = false
+                }
+                
                                      }
                                print(playerNum)
                                print(compNum)

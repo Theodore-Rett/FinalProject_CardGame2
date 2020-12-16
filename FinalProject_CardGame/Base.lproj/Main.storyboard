@@ -252,6 +252,13 @@
                                     <action selector="restartButton:" destination="1Nx-8T-EPy" eventType="touchUpInside" id="0AD-H9-3iS"/>
                                 </connections>
                             </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bQr-vW-hvS">
+                                <rect key="frame" x="30" y="200" width="315" height="85"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="33"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.1853266033" green="0.30280377539999997" blue="0.18438355470000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="0Vu-yj-0Az"/>
@@ -271,6 +278,7 @@
                         <outlet property="goBtn" destination="OZx-7w-U6d" id="LR2-Vw-5tr"/>
                         <outlet property="numCardsCompLabel" destination="aVD-qk-3RN" id="0t0-w0-q5f"/>
                         <outlet property="numCardsPlayerLabel" destination="2q9-UB-JEY" id="zpF-WR-7f4"/>
+                        <outlet property="outcomeLabel" destination="bQr-vW-hvS" id="TKB-rc-X6z"/>
                         <outlet property="plainCompCard" destination="ljv-8p-5tP" id="MzQ-Og-ln8"/>
                         <outlet property="plainCompCard2" destination="bCZ-sb-Efm" id="KvA-Hq-Dyl"/>
                         <outlet property="plainPlayerCard" destination="gLF-UC-rk8" id="Oqv-7r-DK3"/>
