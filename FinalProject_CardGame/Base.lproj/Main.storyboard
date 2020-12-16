@@ -200,6 +200,14 @@
                                 <rect key="frame" x="196" y="379" width="185" height="214"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nJa-9E-Q77">
+                                <rect key="frame" x="210" y="379" width="163" height="214"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yHQ-X1-ocd">
+                                <rect key="frame" x="6" y="379" width="163" height="214"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wbW-Uy-7sw">
                                 <rect key="frame" x="16" y="384" width="53" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -207,8 +215,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gb2-0n-PXO">
-                                <rect key="frame" x="107" y="544" width="53" height="49"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gb2-0n-PXO">
+                                <rect key="frame" x="113" y="543" width="53" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="25"/>
                                 <nil key="textColor"/>
@@ -221,8 +229,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iIq-gt-UUe">
-                                <rect key="frame" x="312" y="544" width="53" height="49"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iIq-gt-UUe">
+                                <rect key="frame" x="317" y="544" width="53" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Palatino-Roman" family="Palatino" pointSize="25"/>
                                 <nil key="textColor"/>
@@ -239,9 +247,11 @@
                         <outlet property="bottomPlayerNum2" destination="gb2-0n-PXO" id="xla-18-oue"/>
                         <outlet property="bottomPlayerNumber" destination="SF3-Ls-qax" id="C5g-B3-0bj"/>
                         <outlet property="compSymbol" destination="k8Z-Kv-bqM" id="M2b-mm-dzx"/>
+                        <outlet property="compSymbol2" destination="nJa-9E-Q77" id="0qN-pv-82b"/>
                         <outlet property="compWarCard1" destination="Hfy-re-0wK" id="5iV-Uh-LWF"/>
                         <outlet property="compWarCard2" destination="cLN-cM-AfK" id="61z-Ie-yGh"/>
                         <outlet property="compWarCard3" destination="vnP-ym-TP6" id="qU1-q4-dgW"/>
+                        <outlet property="computerLabel" destination="Z4s-GC-JPM" id="a0o-IH-pN5"/>
                         <outlet property="goBtn" destination="OZx-7w-U6d" id="LR2-Vw-5tr"/>
                         <outlet property="numCardsCompLabel" destination="aVD-qk-3RN" id="0t0-w0-q5f"/>
                         <outlet property="numCardsPlayerLabel" destination="2q9-UB-JEY" id="zpF-WR-7f4"/>
@@ -250,6 +260,7 @@
                         <outlet property="plainPlayerCard" destination="gLF-UC-rk8" id="Oqv-7r-DK3"/>
                         <outlet property="plainPlayerCard2" destination="pB7-yb-7Ur" id="W6L-26-DtL"/>
                         <outlet property="playerSymbol" destination="TOk-ry-Kwt" id="Y2V-g3-v3s"/>
+                        <outlet property="playerSymbol2" destination="yHQ-X1-ocd" id="Kmt-Ht-n3Y"/>
                         <outlet property="playerWarCard1" destination="EHC-Ai-ZdM" id="4OY-hq-qix"/>
                         <outlet property="playerWarCard2" destination="dp0-TM-HlN" id="kdS-3U-YKV"/>
                         <outlet property="playerWarCard3" destination="EBR-Ey-4A9" id="BwA-8v-vwq"/>
@@ -260,6 +271,7 @@
                         <outlet property="topPlayerNum2" destination="wbW-Uy-7sw" id="jhb-3i-G1W"/>
                         <outlet property="topPlayerNumber" destination="07H-cC-qA5" id="Umc-WT-pRv"/>
                         <outlet property="warLabel" destination="nHq-A1-yC9" id="5vh-Ak-dKz"/>
+                        <outlet property="youLabel" destination="UMM-xg-gS8" id="Der-hY-Whe"/>
                     </connections>
                 </viewController>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="CZL-r9-dBm">
