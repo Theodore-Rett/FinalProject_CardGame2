@@ -425,6 +425,7 @@ class PlaySpace: UIViewController {
                     outcomeLabel.isHidden = false
                 }
                 
+                playerNum = 1000
                                      }
                                print(playerNum)
                                print(compNum)
